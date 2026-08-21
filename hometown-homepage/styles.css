@@ -1,0 +1,91 @@
+/**
+Palette: https://scrimba.com/links/hometown-palette
+RED: #E63946
+LIGHT: #F1FAEE
+AQUA: #A8DADC
+LIGHT BLUE: #457B9D
+DARK BLUE: #1D3557
+
+*/
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+#hero-section {
+    background-image: url(images/Glasgow-aerial.jpg);
+    background-size: cover;
+    background-position: center 30%;
+    box-sizing: border-box;
+    height: 40vh;
+    margin: 5px 5px 0px;
+    padding-top: 130px;
+    text-shadow: 0 0 1px black;
+}
+
+#hero-title, #hero-h2 {
+    color: white;
+    margin:  0 auto 10px;
+    border-radius: 5px;
+}
+
+#hero-title {
+    background-color: #457B9D;
+    width: 240px;
+    padding: 8px 15px;
+}
+#hero-h2 {
+    background-color: #1D3557;
+    width: 425px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+img {
+    width: 100px;
+}
+
+#activities-section {
+    background-color: #F1FAEE;
+    margin: 0px 5px 0px;
+    margin-block-start: 0px;
+    color: #1D3557;
+}
+#activities-section h3 {
+    margin-top: 0;
+    padding-top: 20px;
+    font-weight: 700px;
+    font-size: 24px;
+}
+
+#activities-section h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#activities-section p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#activities-sub-section {
+    display: flex;
+    padding: 0 20px;
+    gap: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+#activities-sub-section > div {
+    flex: 1;
+}
+
+.img-activities {
+    width: 100px;
+    height:100px;
+    border-radius: 50%; 
+}
