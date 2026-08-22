@@ -87,5 +87,59 @@ img {
 .img-activities {
     width: 100px;
     height:100px;
-    border-radius: 50%; 
+    border-radius: 50%;
+    transition: transform 0.3s ease; 
+}
+
+.img-activities:hover {
+    transform: scale(4,2);
+    position: relative;
+    border-radius: 5px;
+    z-index: 10;
+}
+#guide-section {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 500px;
+    color: #1D3557;
+    gap: 10px;
+    margin: 20px auto;
+    background-color: #A8DADC;
+    border-radius: 10px;
+    border-bottom: 6px solid #1D3557;
+}
+
+#guide-section > div {
+    
+    padding: 20px 10px;
+}
+
+#guide-section-image {
+    flex: 0 1 auto;
+    margin-left: 20px;
+}
+
+#guide-section  img {
+    
+    width: 150px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+#guide-section-text h3 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 700px;
+}
+
+#guide-section-text p {
+    margin: 5px 0;
+    font-size: 16px;
+    font-style: italic;
+}
+
+#guide-section-text h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0;
 }
