@@ -1,0 +1,51 @@
+/* #ff5252
+   #1B244A
+*/
+
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #1b244a;
+    max-width: 400px;
+    max-height: 60vh;
+    padding:0 10px 20px;
+    margin: auto;
+    border: solid 5px black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+}
+
+h3 {
+    margin-bottom: 0.2em;
+}
+
+.scoreboard {
+    font-family: cursedTimer;
+    background-color: black;
+    color: #ff5252;
+    padding: 20px 15px 5px;
+    font-size: 90px;
+    border-radius: 5px;
+    min-width: 2ch;
+}
+
+p {
+    margin:0; 
+}
+
+
+button {
+    font-family: cursedTimer;
+    margin: 10px 3px 20px;
+    background-color: #1b244a;
+    border: solid 1px #9AABD8;
+    border-radius: 5px;
+    color: #9AABD8;
+    padding: 8px 10px;
+}
