@@ -8,21 +8,28 @@ body {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     text-align: center;
     background-color: #1b244a;
-    max-width: 400px;
+    max-width: 550px;
     max-height: 60vh;
     padding:0 10px 20px;
     margin: auto;
     border: solid 5px black;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5em;
+    font-size: 2em;
+}
+.fullWidthWrapper {
+    width: 100%;
 }
 
+
+
+
 h3 {
-    margin-bottom: 0.2em;
+    margin: 0.4em auto 0.2em;
 }
 
 .scoreboard {
@@ -32,11 +39,18 @@ h3 {
     padding: 20px 15px 5px;
     font-size: 90px;
     border-radius: 5px;
-    min-width: 2ch;
-}
+    min-width: 3.5ch;
+    
 
+}
+.timer {
+    color: #FFBF00;
+    max-width: 5ch;
+    margin: 20px auto 5px;
+}
 p {
-    margin:0; 
+    margin:0;
+    padding-right: 10px; 
 }
 
 
@@ -47,5 +61,18 @@ button {
     border: solid 1px #9AABD8;
     border-radius: 5px;
     color: #9AABD8;
-    padding: 8px 10px;
+    padding: 10px 5px;
+    width: 55px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#newGame {
+    width: 100%;
+}
+
+#newgame-btn {
+    width: 10vw
 }

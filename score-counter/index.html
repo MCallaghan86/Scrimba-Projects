@@ -11,23 +11,31 @@
     </head>
     <body>
         <div class="container">
+            <div class="fullWidthWrapper">
+                <div class="scoreboard timer">
+                    <p id="timer">00:00</p>
+                </div>
+            </div>
             <div>
                 <h3>HOME</h3>
                 <div class="scoreboard">
-                    <p id="home-score">10</p>
+                    <p id="home-score">0</p>
                 </div>
-                <button class="plus1">+1</button>
-                <button class="plus2">+2</button>
-                <button class="plus3">+3</button>
+                <button class="plus1" onclick="addScore(this, 1)">+1</button>
+                <button class="plus2" onclick="addScore(this, 2)">+2</button>
+                <button class="plus3" onclick="addScore(this, 3)">+3</button>
             </div>
             <div>
                 <h3>VISITOR</h3>
                 <div class="scoreboard">
                     <p id="visitor-score">0</p>
                 </div>
-                <button class="plus1">+1</button>
-                <button class="plus2">+2</button>
-                <button class="plus3">+3</button>
+                <button class="plus1" onclick="addScore(this, 1)">+1</button>
+                <button class="plus2" onclick="addScore(this, 2)">+2</button>
+                <button class="plus3" onclick="addScore(this, 3)">+3</button>
+            </div>
+            <div id="newGame">
+                <button id="newgame-btn" onclick="newGame()">NEW GAME</button>
             </div>
         </div>
         <script src="index.js"></script>
