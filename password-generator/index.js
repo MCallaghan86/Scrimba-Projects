@@ -1,4 +1,4 @@
-const characters = ["A","B","C","D","E","F","G","H","I",
+const characters =["A","B","C","D","E","F","G","H","I",
     "J","K","L","M","N","O","P","Q","R","S","T","U","V",
     "W","X","Y","Z","a","b","c","d","e","f","g","h","i",
     "j","k","l","m","n","o","p","q","r","s","t","u","v",
@@ -7,6 +7,23 @@ const characters = ["A","B","C","D","E","F","G","H","I",
     "(",")","_","-","+","=","{","[","}","]",",","|",":",";",
     "<",">",".","?","/"];
 
+let passwordEls = document.querySelectorAll(".password-el")
+let passwordLength = 15
 
+function generatePasswords() {
+    for (let j=0; j<passwordEls.length; j++) {
+        let password = ""
+    for (let i=0; i<passwordLength; i++) {
+        password += getRandomChar()
+        }
+        passwordEls[j].textContent = password
+    }
+}
 
+function getRandomChar() {
+        let randomIndex = Math.floor( Math.random() * characters.length)
+        return characters[randomIndex]
+    
 
+}
+console.log(passwordEls)

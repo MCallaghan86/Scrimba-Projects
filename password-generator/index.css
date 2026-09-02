@@ -2,7 +2,8 @@ html {
     background-color: black;
 }
 body {
-    width: clamp(30vw, 30vw, 40vw);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: clamp(500px, 30vw, 600px);
     margin: 20px auto;
     padding: 20px 40px 30px;
     color: white;
@@ -14,11 +15,12 @@ body {
 }
 
 h1 {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-size: xx-large;
 }
 
 h3 {
-    margin: 5px 0px 50px;
+    margin: 8px 0px 50px;
     font-weight: normal;
 }
 
