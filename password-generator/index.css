@@ -85,6 +85,12 @@ div {
     text-align: center;
 }
 
+.options-row {
+    padding: 2px 0px;
+    display:flex;
+    justify-content: space-between;
+}
+
 #length-slider {
     accent-color: #10B981;
 }
@@ -105,8 +111,15 @@ span {
 button {
     background-color: #10B981;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 5px;
     color: #D5D4D8;
     font-weight: bold;
+    margin: auto 0;
+    transition: transform 0.1s;
+}
+button:active {
+    transform: translateY(2px) scale(0.98);
+    transition: transform 0.1s;
+    background-color: #0ea573;
 }
