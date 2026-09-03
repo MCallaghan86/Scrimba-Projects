@@ -1,5 +1,5 @@
 
-const characters =["A","B","C","D","E","F","G","H","I",
+/*const characters =["A","B","C","D","E","F","G","H","I",
     "J","K","L","M","N","O","P","Q","R","S","T","U","V",
     "W","X","Y","Z","a","b","c","d","e","f","g","h","i",
     "j","k","l","m","n","o","p","q","r","s","t","u","v",
@@ -7,6 +7,22 @@ const characters =["A","B","C","D","E","F","G","H","I",
     "7", "8", "9","~","`","!","@","#","$","%","^","&","*",
     "(",")","_","-","+","=","{","[","}","]",",","|",":",";",
     "<",">",".","?","/"];
+*/
+
+
+let letters = ["A","B","C","D","E","F","G","H","I",
+    "J","K","L","M","N","O","P","Q","R","S","T","U","V",
+    "W","X","Y","Z","a","b","c","d","e","f","g","h","i",
+    "j","k","l","m","n","o","p","q","r","s","t","u","v",
+    "w","x","y","z"];
+
+let numbers = ["0", "1", "2", "3", "4", "5", "6", 
+    "7", "8", "9"];
+
+let symbols = ["~","`","!","@","#","$","%","^","&","*",
+    "(",")","_","-","+","=","{","[","}","]",",","|",":",";",
+    "<",">",".","?","/"];
+let characters = []
 
 let passwordEls = document.querySelectorAll(".password-el")
 
@@ -29,11 +45,40 @@ function generatePasswords() {
     }
 }
 
+function isNumbersChecked() {
+    numCheck = document.getElementById("num-check").checked
+    return 
+}
+
+function isSymbolsChecked() {
+    symbolCheck = document.getElementById("symbol-check").checked
+    return 
+}
+
+function setCharacters() {
+    isNumbersChecked()
+    isSymbolsChecked()
+    if (numCheck && symbolCheck) {
+        let characters = letters.concat(numbers, symbols)
+        return characters
+    } else if (numCheck) {
+        let characters = letters.concat(numbers)
+        return characters
+    } else if (symbolCheck) {
+        let characters = letters.concat(symbols)
+        return characters
+    } else {
+        let characters = letters
+        return characters
+    }
+}
+
 function getRandomChar() {
+        characters = setCharacters()
         let randomIndex = Math.floor( Math.random() * characters.length)
         return characters[randomIndex]
-    
-}
+    }
+
 function changeTheme(event){ 
     document.body.setAttribute("data-theme", event.target.value)
 }
