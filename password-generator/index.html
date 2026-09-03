@@ -16,7 +16,13 @@
                 <span>random password<span>
             </h1>
             <h3>Never use an insecure password again.</h3>
-            <button id="pass-btn" onclick="generatePasswords()">Generate passwords</button>
+            <div id="password-generator">
+                <button id="pass-btn" onclick="generatePasswords()">Generate passwords</button>
+                <div id="pass-options">
+                    <label for="password-length" id="length-label">Length: 15</label>
+                    <input type="range" id="length-slider" min="10" max="17" value="15" step="1">
+                </div>
+            </div>  
         </div>    
         <div id="password-container"> 
             <p class="password-el"></p>

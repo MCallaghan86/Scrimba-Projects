@@ -9,13 +9,20 @@ const characters =["A","B","C","D","E","F","G","H","I",
     "<",">",".","?","/"];
 
 let passwordEls = document.querySelectorAll(".password-el")
-let passwordLength = 15
+
+
+
+let lengthSlider = document.getElementById("length-slider")
+let textlength = document.getElementById("length-label")
+
 document.getElementById("theme-select").addEventListener("change", changeTheme)
+document.getElementById("length-slider").addEventListener("input", setLengthText)
+setLengthText()
 
 function generatePasswords() {
     for (let j=0; j<passwordEls.length; j++) {
         let password = ""
-    for (let i=0; i<passwordLength; i++) {
+    for (let i=0; i<parseInt(lengthSlider.value); i++) {
         password += getRandomChar()
         }
         passwordEls[j].textContent = password
@@ -29,4 +36,7 @@ function getRandomChar() {
 }
 function changeTheme(event){ 
     document.body.setAttribute("data-theme", event.target.value)
+}
+function setLengthText() {
+    textlength.textContent = "Length: "  + lengthSlider.value
 }

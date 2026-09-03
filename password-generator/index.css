@@ -74,6 +74,20 @@ div {
     gap: 30px;
 
 }
+#password-generator {
+    display:flex;
+    justify-content: space-between;
+    
+}
+#pass-options{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#length-slider {
+    accent-color: #10B981;
+}
 
 p {
     background-color: #2F3E53;
