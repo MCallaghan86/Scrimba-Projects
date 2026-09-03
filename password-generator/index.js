@@ -1,3 +1,4 @@
+
 const characters =["A","B","C","D","E","F","G","H","I",
     "J","K","L","M","N","O","P","Q","R","S","T","U","V",
     "W","X","Y","Z","a","b","c","d","e","f","g","h","i",
@@ -9,6 +10,7 @@ const characters =["A","B","C","D","E","F","G","H","I",
 
 let passwordEls = document.querySelectorAll(".password-el")
 let passwordLength = 15
+document.getElementById("theme-select").addEventListener("change", changeTheme)
 
 function generatePasswords() {
     for (let j=0; j<passwordEls.length; j++) {
@@ -24,6 +26,7 @@ function getRandomChar() {
         let randomIndex = Math.floor( Math.random() * characters.length)
         return characters[randomIndex]
     
-
 }
-console.log(passwordEls)
+function changeTheme(event){ 
+    document.body.setAttribute("data-theme", event.target.value)
+}

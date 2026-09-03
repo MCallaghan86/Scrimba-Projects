@@ -1,17 +1,48 @@
+:root {
+    color-scheme: light dark;
+    
+
+    --bg-color: #1F2937;
+    --text-color: #D5D4D8;
+    --border-color: #D5D4D8;
+
+}
+
+
+
 html {
     background-color: black;
 }
+body[data-theme="light"] {
+    --bg-color: #D5D4D8;
+    --text-color: #2F3E53;
+    --border-color: #2F3E53;
+
+}
+
+
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: clamp(500px, 30vw, 600px);
     margin: 20px auto;
     padding: 20px 40px 30px;
-    color: white;
-    background-color: #1F2937;
+    color: var(--text-color);
+    background-color: var(--bg-color);
     font-weight: bold;
     border-radius: 5px;
-    border: solid 2px #D5D4D8;
+    border: solid 2px var(--border-color);
     
+}
+
+#theme-container {
+    text-align: right;
+}
+
+#theme-select {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: solid 2px var(--border-color);
+    border-radius: 5px;
 }
 
 h1 {
@@ -26,8 +57,8 @@ h3 {
 
 div {
     
-    color: #D5D4D8;
-    background-color: #1F2937;
+    color: var(--text-color);
+    background-color: var(--bg-color);
 }
 
 #hero {
@@ -40,7 +71,7 @@ div {
     justify-content: flex-start;
     flex: 1;
     padding-top: 20px;
-    gap: 40px;
+    gap: 30px;
 
 }
 
@@ -62,6 +93,6 @@ button {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    color: white;
+    color: #D5D4D8;
     font-weight: bold;
 }
