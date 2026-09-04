@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     color-scheme: light dark;
     
@@ -23,7 +27,7 @@ body[data-theme="light"] {
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: clamp(500px, 30vw, 600px);
+    width: clamp(640px, 35vw, 700px);
     margin: 20px auto;
     padding: 20px 40px 30px;
     color: var(--text-color);
@@ -74,6 +78,27 @@ div {
     gap: 30px;
 
 }
+
+.password-row  button {
+    background-color: rgba(47, 62, 83, 1);
+    opacity: 1;
+    background-image: url(images/content_copy_24dp_10B981.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.password-row {
+    position: relative;
+}
+
+
 #password-generator {
     display:flex;
     justify-content: space-between;
@@ -96,17 +121,41 @@ div {
 }
 
 p {
+    box-sizing: border-box;
     background-color: #2F3E53;
     color: #10B981;
     border-radius: 5px;
-    padding: 10px 40px;
-    width: 15rem;
-    height: 1.5rem;
+    padding: 15px 40px;
+    width: 17rem;
+    height: 3rem;
+    
     text-align: center;
 }
 span {
     color: #10B981;
 }
+
+.copy-tooltip {
+    position: absolute;
+    bottom: 130%;      
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2F3E53;
+    color: #10B981;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.copy-tooltip.show {
+    opacity: 1;
+}
+
+
 
 button {
     background-color: #10B981;
@@ -122,4 +171,9 @@ button:active {
     transform: translateY(2px) scale(0.98);
     transition: transform 0.1s;
     background-color: #0ea573;
+}
+
+.password-row button:active {
+    transform: translateY(-50%) scale(0.9);
+    background-color: #2F3E53;
 }
