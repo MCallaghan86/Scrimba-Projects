@@ -1,0 +1,104 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: light dark;
+
+
+    --box-color: #273549;
+    --bg-color: #1F2937;
+    --units-color: #CCC1FF;
+    --text-color: #FFFFFF;  
+}
+
+html {
+    background-color: black;
+    overflow: hidden;
+}
+
+body[data-theme="light"] {
+    --bg-color: #F4F4F4;
+    --box-color: #FFFFFF;
+    --units-color: #5A537B;
+    --text-color: #353535;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 20px auto;
+    background-color: var(--bg-color);
+    width: clamp(400px, 30vw, 700px);
+    border-radius: 5px;
+    padding-bottom: 10px;
+    overflow: hidden;
+
+}
+#theme-container {
+    text-align: right;
+    background-color: #6943FF;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+#theme-select {
+    background-color: var(--bg-color);
+    color: #FFFFFF;
+    background-color: #6943FF;
+    border: solid 1px #B295FF;
+    border-radius: 5px;
+}
+
+
+#hero-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #6943FF;
+    padding-bottom: 10px;
+}
+
+#user-input {
+    width: 2.5em;
+    text-align: center;
+    margin: 10px auto;
+    height: 1.5em;
+    font-size: 3rem;
+    font-weight: bolder;
+    border: solid 2px #B295FF;
+    background-color: #6943FF;
+    border-radius: 5px;
+}
+
+#convert-btn {
+    width: 7.5em;
+    text-align: center;
+    color: #3D3D3D;
+    margin: 10px auto;
+    height: 2.4em;
+    font-size: 1rem;
+    font-weight: bolder;
+    border: none;
+    background-color: #ffffFF;
+    border-radius: 5px;
+}
+
+
+#conversion-container > div {
+    background-color: var(--box-color);
+    text-align: center;
+    width: clamp(350px, 28vw, 600px);
+    margin: 5px auto;
+    
+}
+#conversion-container h3 {
+    padding-top: 10px;
+    margin-bottom: 5px;
+    color: var(--units-color)
+}
+
+#conversion-container p {
+    margin-top: 0;
+    padding-bottom: 10px;
+    color: var(--text-color)
+}
