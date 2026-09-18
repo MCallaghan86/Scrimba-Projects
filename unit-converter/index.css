@@ -30,7 +30,7 @@ body {
     background-color: var(--bg-color);
     width: clamp(400px, 30vw, 700px);
     border-radius: 5px;
-    padding-bottom: 10px;
+    padding-bottom: 9px;
     overflow: hidden;
 
 }
