@@ -4,10 +4,10 @@ import { getDatabase,
          push,
         onValue,
         remove } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-database.js";
-import { databaseURL } from "./config.js";
+
 
 const firebaseConfig = {
-    databaseURL
+    databaseURL: "https://leads-tracker-app-bec72-default-rtdb.europe-west1.firebasedatabase.app/"
 }
 
 const app = initializeApp(firebaseConfig);
