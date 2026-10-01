@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 html {
-    background-color: black;
+    background-image: linear-gradient(to bottom, rgb(3, 3, 195), rgb(2, 20, 90));
 }
 
 html, body {
@@ -44,6 +44,14 @@ body {
     width: 32px;
     margin-left:0;
     margin-right: 4px;
+}
+
+.icon:hover {
+    transform:scale(1.15)
+}
+
+.icon:active {
+    transform:scale(0.9)
 }
 
 .post .header {
