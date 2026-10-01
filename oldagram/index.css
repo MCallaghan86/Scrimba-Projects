@@ -1,5 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    background-color: black;
+}
+
 html, body {
     margin: 0;
     padding: 0;
 }
+body {
+    width: 450px;
+    margin:0 auto;
+    background-color: white;
+    font-family: "Source sans 3",sans-serif;
+}
 
+.title {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 15px;
+    border-bottom: solid 1px grey;
+}
+
+.header {
+    display: flex;
+    padding: 10px;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin:auto 0;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+}
+.icon {
+    height: 32px;
+    width: 32px;
+    margin-left:0;
+    margin-right: 4px;
+}
+
+.post .header {
+    display: flex;
+    justify-content: start;
+}
+
+.post .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: auto 6px auto 2px;
+}
+.name {
+    font-weight: bold;
+}
+
+.post .img {
+    width: 100%;
+}
+
+.interactions {
+    padding: 10px 10px;
+}
+.interactions span {
+    font-weight: bold;
+}
+
+
+
+p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
