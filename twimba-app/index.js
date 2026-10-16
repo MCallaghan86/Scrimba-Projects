@@ -1,9 +1,13 @@
 import { tweetsData } from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
-
-let tweets = tweetsData
+const localStorageKey = "tweetsData"
+let tweets = JSON.parse(localStorage.getItem(localStorageKey)) || tweetsData
 const authorId = '@Scrimba'
+
+
+
+
 
 document.addEventListener('click', function(e){
     if(e.target.dataset.like){
@@ -90,7 +94,6 @@ function handleTweetBtnClick(){
 
 function getFeedHtml(){
     let feedHtml = ``
-    
     tweets.forEach(function(tweet){
         
         let likeIconClass = ''
@@ -180,6 +183,8 @@ function getFeedHtml(){
 
 function render(){
     document.getElementById('feed').innerHTML = getFeedHtml()
+    const stringifiedtweets = JSON.stringify(tweets)
+    localStorage.setItem(localStorageKey, stringifiedtweets)
 }
 
 render()
