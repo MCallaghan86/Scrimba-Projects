@@ -24,6 +24,9 @@ document.addEventListener('click', function(e){
     }
     else if(e.target.id === 'tweet-btn'){
         handleTweetBtnClick()
+    } 
+    else if(e.target.dataset.replybtn) {
+        handleReplyBtnClick(e.target.dataset.replybtn)
     }
 })
  
@@ -92,6 +95,23 @@ function handleTweetBtnClick(){
 
 }
 
+function handleReplyBtnClick(tweetId) {
+    const replyInput = document.getElementById(`replyText-${tweetId}`)
+    const targetTweetObj = tweets.filter(function(tweet){
+        return tweet.uuid === tweetId})[0]
+
+    if(replyInput.value) {
+        targetTweetObj.replies.unshift({
+            handle: authorId,
+            profilePic:'images/scrimbalogo.png',
+            tweetText: replyInput.value
+        })
+        console.log(targetTweetObj)
+        render()
+        replyInput.value = ''
+    }
+}
+
 function getFeedHtml(){
     let feedHtml = ``
     tweets.forEach(function(tweet){
@@ -108,13 +128,18 @@ function getFeedHtml(){
             retweetIconClass = 'retweeted'
         }
         
-        let deleteIconClass = 'hidden'
 
-        if (tweet.handle === authorId) {
-            deleteIconClass = ''
-        }
         
-        let repliesHtml = ''
+        
+        let repliesHtml = `<div id="retweetTextContainer-${tweet.uuid}">
+                                <label for="replyText-${tweet.uuid}">Write Your Reply:</label>
+                                <textarea 
+                                id="replyText-${tweet.uuid}" 
+                                placeholder="Share your thoughts" 
+                                data-replytext=${tweet.uuid}></textarea>
+                                <button id="reply-btn-${tweet.uuid}" data-replybtn="${tweet.uuid}">Reply</button>
+                            </div>
+                                 `
         
         if(tweet.replies.length > 0){
             tweet.replies.forEach(function(reply){
