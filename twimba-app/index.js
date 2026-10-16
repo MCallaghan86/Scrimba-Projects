@@ -1,6 +1,10 @@
 import { tweetsData } from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
+
+let tweets = tweetsData
+const authorId = '@Scrimba'
+
 document.addEventListener('click', function(e){
     if(e.target.dataset.like){
        handleLikeClick(e.target.dataset.like) 
@@ -11,13 +15,16 @@ document.addEventListener('click', function(e){
     else if(e.target.dataset.reply){
         handleReplyClick(e.target.dataset.reply)
     }
+    else if(e.target.dataset.delete) {
+        handleDeleteClick(e.target.dataset.delete)
+    }
     else if(e.target.id === 'tweet-btn'){
         handleTweetBtnClick()
     }
 })
  
 function handleLikeClick(tweetId){ 
-    const targetTweetObj = tweetsData.filter(function(tweet){
+    const targetTweetObj = tweets.filter(function(tweet){
         return tweet.uuid === tweetId
     })[0]
 
@@ -32,7 +39,7 @@ function handleLikeClick(tweetId){
 }
 
 function handleRetweetClick(tweetId){
-    const targetTweetObj = tweetsData.filter(function(tweet){
+    const targetTweetObj = tweets.filter(function(tweet){
         return tweet.uuid === tweetId
     })[0]
     
@@ -50,12 +57,22 @@ function handleReplyClick(replyId){
     document.getElementById(`replies-${replyId}`).classList.toggle('hidden')
 }
 
+function handleDeleteClick(tweetId){
+    
+    if(confirm()) { 
+    tweets = tweets.filter(function(tweet){
+        return tweet.uuid !== tweetId
+    })
+    render()
+    }
+}
+
 function handleTweetBtnClick(){
     const tweetInput = document.getElementById('tweet-input')
 
     if(tweetInput.value){
-        tweetsData.unshift({
-            handle: `@Scrimba`,
+        tweets.unshift({
+            handle: `${authorId}`,
             profilePic: `images/scrimbalogo.png`,
             likes: 0,
             retweets: 0,
@@ -74,7 +91,7 @@ function handleTweetBtnClick(){
 function getFeedHtml(){
     let feedHtml = ``
     
-    tweetsData.forEach(function(tweet){
+    tweets.forEach(function(tweet){
         
         let likeIconClass = ''
         
@@ -86,6 +103,12 @@ function getFeedHtml(){
         
         if (tweet.isRetweeted){
             retweetIconClass = 'retweeted'
+        }
+        
+        let deleteIconClass = 'hidden'
+
+        if (tweet.handle === authorId) {
+            deleteIconClass = ''
         }
         
         let repliesHtml = ''
@@ -106,6 +129,15 @@ function getFeedHtml(){
             })
         }
         
+        let deletIconHtml = ''
+
+        if (tweet.handle === authorId) {
+            deletIconHtml = `<span class="tweet-detail">   
+                    <i class="fa-solid fa-trash"
+                    data-delete="${tweet.uuid}"
+                    ></i>
+                </span>`
+        }
           
         feedHtml += `
 <div class="tweet">
@@ -133,6 +165,7 @@ function getFeedHtml(){
                     ></i>
                     ${tweet.retweets}
                 </span>
+                ${deletIconHtml}
             </div>   
         </div>            
     </div>

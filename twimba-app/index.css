@@ -89,13 +89,15 @@ button{
 .tweet-details{
     display: flex;
     font-size: 13px;
-    justify-content: space-between;
-    width: 160px;
+    gap: 10px;
+    
+    
 }
 
 .tweet-detail{
     display: flex;
     gap: 4px;
+    min-width: 60px;
 }
 
 .tweet-reply{
