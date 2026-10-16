@@ -1,0 +1,6 @@
+Allow user to delete tweets
+
+Reply to a specific tweet
+
+Save tweets,likes, and retweets to localStorage
+
