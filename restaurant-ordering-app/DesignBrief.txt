@@ -1,0 +1,19 @@
+Requirements:
+
+follow design spec
+
+Render the three menu options using JS
+
+Be able to add/remove items
+
+Have a payment modal with compulory form inputs
+
+
+Stretch Goals:
+
+
+Change the theme
+
+Offer a meal deal discount
+
+Allow users to rate their experience

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--   Fonts    -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+        <!--   CSS      -->
+       <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <h1 class="title">Jimmy's Diner</h1>
+            <p>The best burgers and pizzas in town!</p>
+        </header>
+        <section class="menu-container">
+            <div class="menu-item" data-menu-item="pizza">
+                <div class="menu-image">    
+                <img src="images/pizza.png" alt="Pizza Slice">
+                </div>
+                <div class="menu-details">
+                    <p class="item-name">Pizza</p>
+                    <p class="ingredients">ingredients go here</p>
+                    <p class="item-price">$14</p>
+                </div>
+                <div class="add-btn-container">
+                    <button class="add-item-btn">+</button>
+                </div>
+            </div>
+            <div class="menu-item" data-menu-item="pizza">
+                <div class="menu-image">    
+                <img src="images/pizza.png" alt="Pizza Slice">
+                </div>
+                <div class="menu-details">
+                    <p class="item-name">Pizza</p>
+                    <p class="ingredients">ingredients go here</p>
+                    <p class="item-price">$14</p>
+                </div>
+                <div class="add-btn-container">
+                    <button class="add-item-btn">+</button>
+                </div>
+            </div>
+            <div class="menu-item" data-menu-item="pizza">
+                <div class="menu-image">    
+                <img src="images/pizza.png" alt="Pizza Slice">
+                </div>
+                <div class="menu-details">
+                    <p class="item-name">Pizza</p>
+                    <p class="ingredients">ingredients go here</p>
+                    <p class="item-price">$14</p>
+                </div>
+                <div class="add-btn-container">
+                    <button class="add-item-btn">+</button>
+                </div>
+            </div>
+        </section>
+        <section class="checkout-section hidden">
+            <h3>Your Order</h3>
+            <div class="order-item-list">
+                <div class="order-item-selected">
+                    <p class="order-item-name">Pizza</p>
+                    <button class="remove-item-btn">remove</button>
+                    <p class="order-item-price">$14</p>
+                </div>
+            </div>
+            <div class="order-total">
+                <p>Total Price:</p>
+                <p class="order-price">$total</p>
+            </div>
+            <button class="complete-order-btn">Complete Order</button>
+        </section>
+        <div class="modal-bg-overlay">
+            <section class="card-modal">
+                <form>
+                <h1>Enter card details</h1>
+                    <input type="text" class="username-input modal-input" name="username" placeholder="Enter your name">
+                    <input type="text" class="card-number-input modal-input" name="card" placeholder="Enter your card number">
+                    <input type="text" class ="cvv-input modal-input" name="cvv" placeholder="Enter your CVV">
+                    <button class="pay-btn">Pay</button>
+                </form>
+            </section>
+        </div>
+        <div class="thank-you-container">
+            <h1>Thanks $username! Your order is on its way!</h1>
+        </div>
+	<script src="index.js" type="module"></script>
+    </body>
+</html>
+

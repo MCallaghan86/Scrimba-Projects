@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    background-color: #3C3C3C;
+}
+body {
+    margin: 0 auto;
+    width: 600px;
+    height:100%;
+    font-family: 'Smythe', sans-serif;
+    font-size: 16px;
+    background-color: #ffffff;
+    padding-bottom: 20px;
+    outline: 1px solid red;
+    
+} 
+/* header section */
+header {
+    background-image: url(images/header-img.png);
+    background-size: 100% 100%;
+    color: white;
+    height: 167px;
+    font-size: 24px;
+}
+
+.title {
+    padding: 20px 0 5px 20px;
+    margin: 0;
+}
+header p {
+    margin: 0;
+    padding: 0 0 30px 20px;
+}
+
+/* Menu container rendered via JS */
+.menu-container {
+    padding-top: 20px;
+}
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    width: 85%;
+    margin: auto;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    gap: 20px;
+    border-bottom: 1px solid #D2D2D2
+} 
+
+
+.item-name {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    margin-bottom: 0px;   
+}
+
+.item-price {
+    margin-top: 15px;
+    margin-bottom: 10;
+}
+
+.ingredients {
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: #8B8B8B
+}
+
+.add-btn-container {
+   margin-left: auto;
+   align-self: center;
+   margin-right: 5px;
+}
+
+.add-item-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    background-image: url(images/Ellipse.png);
+    background-position: center;
+    background-size: cover;
+    border: none;
+    font-size: 1.5rem;
+    color: #3C3C3C;
+}
+
+
+/* Checkout section */
+
+.checkout-section {
+    font-size: 1.5rem;
+    width: 85%;
+    margin:auto;
+}
+.checkout-section > h3 {
+    text-align: center;   
+}
+
+.order-item-selected {
+    display: flex;
+    height: 4rem;
+    background-color: aqua;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.order-item-selected > p {
+    display: inline-block;
+    width: fit-content;
+    border: 1px solid red;
+    font-size: 1.5rem;
+}
+.remove-item-btn {
+    display: inline-block;
+    width: fit-content;
+    height: 2rem;
+    border: none;
+    background-color: #ffffff;
+    color: #BBBBBB;
+}
+
+.order-item-price {
+    margin-left:auto;
+
+}
+/* Total order price display */
+
+.order-total {
+    display: flex;
+    border-top: 2px solid #393333;
+}
+.order-total > p {
+    margin-top: 10px;
+}
+
+.order-price {
+    margin-left: auto;
+}
+
+.complete-order-btn {
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 40px;
+    background-color: #16DB99;
+    border-radius: 3px;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+
+/* Card Modal */
+
+form > h1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.card-modal {
+    width: 524px;
+    outline: 1px solid red;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+form {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-input {
+    border: 1px solid #757575;
+    border-radius: 4px;
+    height: 4rem;
+    background-color: #ffffff;
+    font-size: 1.25rem;
+    padding-left: 20px;
+}
+.pay-btn {
+    background-color: #16DB99;
+    border-radius: 3px;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.25rem;
+    height: 4rem;
+    margin-top: 20px;
+}
+
+/* Thank you message */
+
+.thank-you-container {
+    width: 85%;
+    background-color: #ECFDF5;
+    color: #065F46;
+    margin: 30px auto;
+    padding: 30px;
+    text-align: center;
+
+}
+
+.thank-you-container > h1 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+
+/* Utility */
+
+.hidden {
+    display: none;
+}
+
+.modal-bg-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+}
+
