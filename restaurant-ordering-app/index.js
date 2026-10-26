@@ -5,12 +5,26 @@ import { menuArray } from "./data.js";
 let orderArray = []
 
 
+const overlay = document.getElementById('modal-bg-overlay')
+const checkout = document.getElementById('checkout-section')
+const thankYouName = document.getElementById('username-thanks')
+const thankYouContainer = document.getElementById('thank-you-container')
+const itemList = document.getElementById('order-item-list')
+
 document.addEventListener('click', function(e) {
     if (e.target.dataset.buy) {
         handleBuyClick(e.target.dataset.buy)
     } else if (e.target.dataset.remove) {
         handleRemoveClick(e.target.dataset.remove)
-    }
+    } else if (e.target.id === 'complete-order-btn') {
+        handleOrderClick()
+    } 
+})
+
+document.getElementById('card-form').addEventListener('submit',function(e) {
+    e.preventDefault()
+    const formData = new FormData(e.target)
+    handlePayClick(formData)
 })
 
 function handleBuyClick(menuItem) {
@@ -23,6 +37,20 @@ function handleBuyClick(menuItem) {
 function handleRemoveClick(itemIndex) {
      orderArray.splice(Number(itemIndex), 1)
      renderCheckout()
+}
+
+function handleOrderClick() {
+    overlay.classList.remove('hidden')
+}
+function handlePayClick(formData) {
+    const userDetails = Object.fromEntries(formData)
+    thankYouName.innerText = userDetails.username
+    thankYouContainer.classList.remove('hidden')
+    overlay.classList.add('hidden')
+    checkout.classList.add('hidden')
+    itemList.innerHTML = ''
+    
+
 }
 
 function updateCheckoutHtml() {
@@ -51,9 +79,9 @@ function getOrderTotal(){
 
 function renderCheckout() {
     if (orderArray.length) {
-        document.getElementById('checkout-section').classList.remove('hidden') 
-    } else {document.getElementById('checkout-section').classList.add('hidden')}
-    document.getElementById('order-item-list').innerHTML= updateCheckoutHtml()
+        checkout.classList.remove('hidden') 
+    } else {checkout.classList.add('hidden')}
+    itemList.innerHTML= updateCheckoutHtml()
     document.getElementById('order-price').textContent = '$' + getOrderTotal()
 }
 

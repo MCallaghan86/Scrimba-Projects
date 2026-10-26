@@ -2,11 +2,11 @@ Requirements:
 
 follow design spec
 
-Render the three menu options using JS
+Render the three menu options using JS - done
 
-Be able to add/remove items
+Be able to add/remove items -done
 
-Have a payment modal with compulory form inputs
+Have a payment modal with compulory form inputs -done
 
 
 Stretch Goals:

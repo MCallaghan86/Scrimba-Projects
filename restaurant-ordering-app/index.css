@@ -7,7 +7,7 @@ html {
 body {
     margin: 0 auto;
     width: 600px;
-    height:100%;
+    min-height: 100vh;
     font-family: 'Smythe', sans-serif;
     font-size: 16px;
     background-color: #ffffff;
