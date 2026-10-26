@@ -12,7 +12,6 @@ body {
     font-size: 16px;
     background-color: #ffffff;
     padding-bottom: 20px;
-    outline: 1px solid red;
     
 } 
 /* header section */
@@ -49,6 +48,11 @@ header p {
     gap: 20px;
     border-bottom: 1px solid #D2D2D2
 } 
+
+.emoji {
+    font-size: 4rem;
+    margin: 0;
+}
 
 
 .item-name {
@@ -88,7 +92,7 @@ header p {
 }
 
 
-/* Checkout section */
+/* Checkout section rendered by JS */
 
 .checkout-section {
     font-size: 1.5rem;
@@ -102,7 +106,6 @@ header p {
 .order-item-selected {
     display: flex;
     height: 4rem;
-    background-color: aqua;
     flex-direction: row;
     gap: 5px;
     align-items: center;
@@ -111,7 +114,6 @@ header p {
 .order-item-selected > p {
     display: inline-block;
     width: fit-content;
-    border: 1px solid red;
     font-size: 1.5rem;
 }
 .remove-item-btn {
@@ -162,7 +164,6 @@ form > h1 {
 
 .card-modal {
     width: 524px;
-    outline: 1px solid red;
     position: fixed;
     top: 50%;
     left: 50%;
