@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--   Font Awesome CDN-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" 
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
         <!--   Fonts    -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +32,7 @@
                 </div>
                 <button class="complete-order-btn" id="complete-order-btn">Complete Order</button>
         </section>
-        <div class="modal-bg-overlay hidden"id="modal-bg-overlay">
+        <div class="modal-bg-overlay hidden"id="cardmodal-bg-overlay">
             <section class="card-modal">
                 <form id="card-form">
                 <h1>Enter card details</h1>
@@ -41,6 +45,28 @@
         </div>
         <div class="thank-you-container hidden" id="thank-you-container">
             <h1>Thanks <span id="username-thanks"></span>! Your order is on its way!</h1>
+        </div>
+        <div class="modal-bg-overlay hidden" id="rating-bg-overlay">
+            <section class="rating-modal">
+                <section class="rating-container" id="rating-container">
+                    <h3>Enjoy using this app? Please leave us a rating!</h3>
+                    <div class="rating-stars" id="rating-stars">
+                        <i class="fa-regular fa-star" data-value="1"></i>
+                        <i class="fa-regular fa-star" data-value="2"></i>
+                        <i class="fa-regular fa-star" data-value="3"></i>
+                        <i class="fa-regular fa-star" data-value="4"></i>
+                        <i class="fa-regular fa-star" data-value="5"></i>
+                    </div>
+                    <button id="rate-btn" disabled>Submit</button>
+                    <button id="cancel-btn">Later</button>
+                </section>
+                <section class="result-container hidden" id="result-container">
+                    <h3 class="rating-message" id="rating-message">
+                        Thanks for giving us a 5<i class="fa-solid fa-star" id="result-star"></i> rating!
+                    </h3>
+                    <button id="close-result-btn">close</button>
+                </section>
+            </section>
         </div>
 	<script src="index.js" type="module"></script>
     </body>

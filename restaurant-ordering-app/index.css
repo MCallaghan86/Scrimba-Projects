@@ -217,6 +217,64 @@ form {
     font-size: 1.75rem;
 }
 
+/* Rating modal */
+
+.rating-modal {
+    width: 524px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    text-align: center;
+    padding: 0 8px 20px 8px;
+    font-size: 2rem;
+
+}
+
+#rating-container >h3 {
+    margin-bottom: 15px;
+    color: #16DB99
+}
+
+#rating-message {
+    margin-bottom: 15px;
+    color: #16DB99
+}
+
+.rating-stars {
+    display: inline-flex;
+    margin: 10px 30px;
+}
+.rating-modal  button {
+    background-color: #16DB99;
+    border-radius: 3px;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 20px 20px 10px 20px;
+    padding: 10px 20px;
+}
+
+#cancel-btn {
+    padding: 10px 30px
+}
+
+.fa-star {
+    font-size: 1.75em;
+    color: #ccc;
+    cursor: pointer;
+    width:auto;
+}
+
+.fa-solid {
+    color: gold
+}
+
+#result-star {
+    font-size: 1em;
+}
 
 /* Utility */
 

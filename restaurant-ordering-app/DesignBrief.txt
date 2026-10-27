@@ -4,9 +4,9 @@ follow design spec
 
 Render the three menu options using JS - done
 
-Be able to add/remove items -done
+Be able to add/remove items - done
 
-Have a payment modal with compulory form inputs -done
+Have a payment modal with compulory form inputs - done
 
 
 Stretch Goals:
@@ -16,4 +16,4 @@ Change the theme
 
 Offer a meal deal discount
 
-Allow users to rate their experience
+Allow users to rate their experience - done
