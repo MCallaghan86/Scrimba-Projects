@@ -11,9 +11,6 @@ Have a payment modal with compulory form inputs - done
 
 Stretch Goals:
 
-
-Change the theme
-
-Offer a meal deal discount
+Offer a meal deal discount -done
 
 Allow users to rate their experience - done

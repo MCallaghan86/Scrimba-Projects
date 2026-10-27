@@ -133,7 +133,8 @@ function getOrderTotal(){
     const orderPrice = orderArray.reduce(function(total, currentItem){
                 return total + currentItem.price
         }, 0)
-    return orderPrice
+         const finalPrice = checkMealDeal(orderPrice)
+    return finalPrice
 }
 
 function renderCheckout() {
@@ -141,7 +142,23 @@ function renderCheckout() {
         checkout.classList.remove('hidden') 
     } else {checkout.classList.add('hidden')}
     itemList.innerHTML= updateCheckoutHtml()
-    document.getElementById('order-price').textContent = '$' + getOrderTotal()
+    document.getElementById('order-price').textContent = '$' + getOrderTotal().toFixed(2)
+}
+
+function checkMealDeal(orderPrice) {
+    
+    const drink = orderArray.find((element) =>element.type === 'drink')
+    const food = orderArray.find(element => element.type === 'food')
+
+    if (drink && food) {
+        document.getElementById('meal-deal').classList.remove('hidden')
+        const discount = (drink.price + food.price) * 0.2
+        return orderPrice - discount
+    } else {
+        document.getElementById('meal-deal').classList.add('hidden')
+        return orderPrice
+    }
+
 }
 
 

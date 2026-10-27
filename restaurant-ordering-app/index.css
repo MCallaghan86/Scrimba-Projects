@@ -138,6 +138,9 @@ header p {
 .order-total > p {
     margin-top: 10px;
 }
+#meal-deal {
+    margin: 10px auto 24px;
+}
 
 .order-price {
     margin-left: auto;
