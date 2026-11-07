@@ -1,0 +1,27 @@
+Build 3 pages from scratch: home main article and about me
+All pages have header and footer
+
+Make all pages responsive:
+    relative units
+    mobile-first design
+    media queries
+    Viewport meta tag -done
+
+
+
+Stretch goals:
+    make it my own
+    add custom images
+    make the content about my learning experience
+    add new pages(link to Github, portfolio, CV)
+
+
+    Only display 6 recent posts, use JS to reveal more on clicking "view more"
+
+
+    responsive navigation displaying hamburger menu on smaller screens
+
+
+
+Hints:
+    check the solo project page and click the hints link

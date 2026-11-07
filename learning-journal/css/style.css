@@ -1,0 +1,312 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@400:600:700&display=swap");
+
+* ::before ::after {
+box-sizing: border-box;
+}
+
+
+
+html {
+    background-color: #505050;
+}
+body {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif;
+    --footer-height: 100px;
+    padding-bottom: var(--footer-height);
+    max-width: 900px;
+}
+
+/* Header and Navigation */
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #090909;
+    padding: 10px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 0.5em;
+}
+.logo img {
+    height: 20px;
+    width: 20px;
+}
+
+.logo h1 {
+    font-size: 1rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0.5em 0 0;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #090909;
+    font-weight: 600;
+    font-size: 0.8em;
+    
+}
+
+ul li {
+    float: left;
+    padding: 0.5em 0.5em;
+}
+
+/* Hero image section */
+.hero-link {
+    text-decoration: none;
+}
+
+.hero-image {
+    background-image: url("../images/image-hero.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 3em 1em 1em 1em;
+}
+
+
+
+.hero-text {
+    color: #ffffff
+}
+
+.hero-text p {
+    line-height: 1.4em;
+}
+
+.hero-date {
+    font-size: 0.9rem;
+}
+
+/* Main Section :Post.html */
+
+.post-container {
+    padding: 1em;
+}
+.post-container img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.post-container h2 {
+    font-size: 1rem;
+}
+
+.post-container p {
+    line-height: 1.4em;
+    color: #151515;
+}
+
+/* About Section: about.html */
+
+
+#portrait-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.about-section {
+    padding: 1em;
+}
+
+.about-section h2 {
+    font-size: 1rem;
+    padding: 0.7em 0;
+}
+
+.about-section p {
+    line-height: 1.4em;
+    color: #151515;
+}
+/* Main article section */
+
+.article-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    padding: 1em;
+}
+
+.article-container.collapsed > .blog:nth-child(n + 4) {
+    display: none;
+}
+
+/* Recent Posts Section: post.html */
+
+.recent-posts h3 {
+    text-align: center;
+}
+
+
+.blog {
+    text-decoration: none;
+
+}
+.blog h1 {
+    color: black;
+}
+
+.article-date {
+    color: #141414;
+
+}
+
+.article-text {
+    color: #505050;
+
+}
+
+article img{
+    width: 100%;
+    border-radius: 0.2em;
+}
+
+
+
+.view-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.view-btn {
+    cursor: pointer;
+    width: 120px;
+    margin:auto;
+    padding: 1em 1.5em;
+    border: none;
+    background-color: white;
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: 0;
+    background-color: #090909;
+    color: white;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: var(--footer-height);
+    justify-content: center;
+    align-items: center;
+}
+
+footer h1 {
+    color: #ECECEC;
+    font-size: 1.1rem;
+    margin: 0.5em;
+}
+footer p {
+    color: #D7D7D7;
+    margin: 0;
+}
+
+
+/* Media queries */
+
+@media (min-width: 400px) {
+
+
+    /* Header Section */
+
+    .header-container {
+        padding: 1em 2em;
+    }
+
+    ul li {
+        padding: 1em;
+    }
+
+    /* Hero Section */
+    
+    .hero-text p {
+    line-height: 1.2em;
+    width: 70%;
+}
+
+.hero-date {
+    font-size: 1rem;
+}
+
+/* Post Section: post.html */
+
+.post-container > *:not(img) {
+    margin-inline: 2em;
+}
+
+/* About Section: about.html */
+
+.intro-container {
+    display: flex;
+    gap: 1.5em;
+    padding: 2em;
+    
+}
+.about-section > *:not(.intro-container) {
+    margin-inline: 3em;
+}
+
+
+/* Articles Section */
+
+.article-container {
+    grid-template-columns:  repeat(3,1fr);
+    padding: 1.5em;
+}
+.article-container.collapsed > .blog:nth-child(n + 4) {
+    display: block;
+}
+
+.article-container.short.collapsed > .blog:nth-child(n + 4) {
+    display:none
+}
+
+.article-container.collapsed > .blog:nth-child(n + 7) {
+    display: none;
+}
+
+
+.view-container {
+    padding-bottom: 1em;
+}
+
+}
+
+
+/* Utility */
+
+.hidden {
+    display: none;
+}
