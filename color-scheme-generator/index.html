@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Fonts -->
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+              <!-- Style Sheet -->
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="theme-container">
+            <label for="theme-select">Mode:</label>
+            <select name="theme" id="theme-select">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </div>
+        <div class="options-container" id="options-container">
+            <input type="color" id="color-picker" name="color-picker" value="#F55A5A"/>
+            <select class="scheme-picker" id="scheme-picker" name="scheme-picker">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">monochrome-dark</option>
+                <option value="monochrome-light">monochrome-light</option>
+                <option value="analogic">analogic</option>
+                <option value="complement">complement</option>
+                <option value="analogic-complement">analogic-complement</option>
+                <option value="triad">triad</option>
+                <option value="quad">quad</option>
+            </select>
+            <button id="getcolor-btn">Get color scheme</button>
+        </div>
+        <section class="schemes-container" id="schemes-container">
+            <div class="color-container" id="color-1"></div>
+            <div class="color-container" id="color-2"></div>
+            <div class="color-container" id="color-3"></div>
+            <div class="color-container" id="color-4"></div>
+            <div class="color-container" id="color-5"></div>
+        </section>
+        <footer class="hex-footer" id="hex-footer">
+            <p class="hex-values" id="hex-1">#f55a5a</p>
+            <p class="hex-values" id="hex-2">#2b283a</p>
+            <p class="hex-values" id="hex-3">#fbf3ab</p>
+            <p class="hex-values" id="hex-4">#aad1b6</p>
+            <p class="hex-values" id="hex-5">#a626d3</p>
+        </footer>
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+Choose "seed color" with an <input type="color"/>
+
+
+Choose color scheme mode in a <selcect> box
+
+
+Clicking button makes requests to the Color API to get a color scheme
+
+
+Stretch Goals
+
+Have clicking on the colors or hexcodes copy the hexcode to the clipboard
+(Ask Claude a reminder on Queryselectors in an event listener)
