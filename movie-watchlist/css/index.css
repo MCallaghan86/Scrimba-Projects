@@ -36,7 +36,10 @@ body[data-theme="light"] {
 body {
     font-family: "Inter", sans-serif;
     background-color: var(--bg-color);
-    color: var(--text-color)
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
     
 
 }
@@ -133,12 +136,34 @@ input::placeholder{
 /* Results section */
 
 
-#search-results-container {
+#search-results-container,
+#watchlist-container {
+    flex: 1;
+    color: grey;
+}
+
+
+#search-results-container.empty,
+#watchlist-container.empty {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 85vh;
+}
+
+
+#watchlist-container a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    gap: 10px;
+}
+
+.fa-circle-plus {
+    font-size:  1.2em;
 }
 
 
