@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/index.css">
+    </head>
+    <body>
+        <div id="background-container">
+            <div id="theme-container">
+                <label for="theme-select">Mode:</label>
+                <select name="theme" id="theme-select">
+                    <option value="dark">Dark</option>
+                    <option value="light">Light</option>
+                </select>
+            </div>
+            <header id="header-section">
+                <div class="header-container" id="nav-container">
+                    <h1>Find your film</h1>
+                    <a href="watchlist.html">My Watchlist</a>
+                </div>
+                <div class="header-container" id="search-container">
+                    <img id="search-icon" src="../images/search.png" alt=""/>
+                    <input type="search" id="title-search" name="title-search" placeholder="Search for a movie"/>
+                    <button id="search-btn">Search</button>
+                </div>
+            </header>
+        </div>
+        <section class="search-results-container" id="search-results-container">
+                <div class="start-container" id="start-container">
+                    <i class="fa-solid fa-film fa-4x"></i>
+                    <p>Start exploring</p>
+                </div>
+        </section>
+        <script src="../index.js"></script>
+    </body>
+</html>
