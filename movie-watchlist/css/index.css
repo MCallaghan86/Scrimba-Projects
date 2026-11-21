@@ -9,6 +9,7 @@
     --bg-color: #1f2937;
     --text-color: white;
     --searchbar-bg: grey;
+    --movieText-color: white;
      
     
 
@@ -32,6 +33,7 @@ body[data-theme="light"] {
     --bg-color: white;
     --text-color: grey;
     --searchbar-bg: white;
+    --movieText-color: black;
 }
 body {
     font-family: "Inter", sans-serif;
@@ -140,6 +142,9 @@ input::placeholder{
 #watchlist-container {
     flex: 1;
     color: grey;
+    width: 90%;
+    margin-inline: auto;
+    padding-top: 40px;
 }
 
 
@@ -149,6 +154,59 @@ input::placeholder{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.fa-star {
+    color: #FEC654
+}
+.movie-img {
+    height: 180px;
+    width: 120px;
+}
+
+.movie-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-bottom: 1px solid grey;
+    padding: 1.5em 0;
+}
+.flex-info {
+    padding: 1.5em 0;
+    gap: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-container p,
+.movie-container h3 {
+    display: inline;
+    color: var(--movieText-color)
+}
+
+.movie-container p {
+    font-size: 0.9em;
+}
+
+.movie-container h3 {
+    font-size: 1.5em;
+}
+.movie-container button {
+    background-color: var(--bg-color);
+    border: none;
+    cursor: pointer;
+    color: var(--movieText-color)
+}
+
+.movie-synopsis p {
+    color: grey;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-clamp: 3;
+    overflow: hidden;
 }
 
 
