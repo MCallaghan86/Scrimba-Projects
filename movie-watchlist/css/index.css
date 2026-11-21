@@ -154,6 +154,7 @@ input::placeholder{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .fa-star {
@@ -198,6 +199,11 @@ input::placeholder{
     border: none;
     cursor: pointer;
     color: var(--movieText-color)
+}
+
+.movie-container button:disabled {
+    cursor: default;
+    color:grey
 }
 
 .movie-synopsis p {
