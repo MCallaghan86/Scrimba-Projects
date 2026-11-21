@@ -9,7 +9,10 @@
     --bg-color: #1f2937;
     --text-color: white;
     --searchbar-bg: grey;
+    --searchbar-border: none;
     --movieText-color: white;
+    --searchbar-highlight: white;
+    --searchbar-highlight-outer: black;
      
     
 
@@ -33,7 +36,10 @@ body[data-theme="light"] {
     --bg-color: white;
     --text-color: grey;
     --searchbar-bg: white;
+    --searchbar-border: 1px solid grey;
     --movieText-color: black;
+    --searchbar-highlight: black;
+    --searchbar-highlight-outer: white;
 }
 body {
     font-family: "Inter", sans-serif;
@@ -51,7 +57,7 @@ body {
 
 #theme-container {
     text-align: right;
-    color: var(--text-color);
+    color: white;
     padding-top: 5px;
     padding-right: 5px;
 }
@@ -74,7 +80,7 @@ body {
 
 #nav-container a{
     text-decoration: none;
-    color: var(--text-color);
+    color: white;
     font-weight: bold;
 }
 
@@ -96,13 +102,15 @@ header h1 {
     justify-content: center;
     height: 2em;
     border-radius: 5px;
+    border: var(--searchbar-border);
     transform: translateY(50%);
     overflow: hidden
 }
 
 #search-container:focus-within {
-        outline: 2px solid white;
-    }
+    outline: 2px solid var(--searchbar-highlight);
+    box-shadow: 0 0 0 4px var(--searchbar-highlight-outer);
+}
 
 #search-icon {
     position: absolute;
