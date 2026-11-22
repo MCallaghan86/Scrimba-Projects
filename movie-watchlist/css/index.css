@@ -94,6 +94,11 @@ body {
 header h1 {
     display: inline-block;
 }
+
+.watchlist-page {
+    padding-bottom: 2.9em;
+
+}
 #search-container {
     position: relative;
     margin-inline: auto;
