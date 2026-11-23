@@ -89,8 +89,8 @@ function changeTheme(event){
 
 function setTheme () {
     const theme = localStorage.getItem("movieWatchlist-theme") || "dark"
-document.body.setAttribute("data-theme", theme)
-document.getElementById("theme-select").value = theme
+    document.body.setAttribute("data-theme", theme)
+    document.getElementById("theme-select").value = theme
 }
 
 function init() {
