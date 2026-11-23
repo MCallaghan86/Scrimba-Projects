@@ -1,5 +1,8 @@
 const myWatchlist = document.getElementById("watchlist-container")
 
+
+
+
 let watchlist = JSON.parse(localStorage.getItem("watchlist")) || []
 
 
@@ -71,3 +74,10 @@ function changeTheme(event){
 }
 
 renderWatchlist()
+setTheme()
+
+function setTheme () {
+    const theme = localStorage.getItem("theme") || "dark"
+document.body.setAttribute("data-theme", theme)
+document.getElementById("theme-select").value = theme
+}

@@ -4,6 +4,8 @@ const titleList = document.getElementById("search-results-container")
 let watchlist = JSON.parse(localStorage.getItem("watchlist")) || []
 
 
+
+
 document.body.addEventListener("click", e => {
         const btn = e.target.closest(".add-btn")
         if(btn) {
@@ -82,4 +84,12 @@ document.getElementById("theme-select").addEventListener("change", changeTheme)
 
 function changeTheme(event){ 
     document.body.setAttribute("data-theme", event.target.value)
+    localStorage.setItem("theme", event.target.value)
 }
+function setTheme () {
+    const theme = localStorage.getItem("theme") || "dark"
+document.body.setAttribute("data-theme", theme)
+document.getElementById("theme-select").value = theme
+}
+
+setTheme()
