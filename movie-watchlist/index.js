@@ -84,12 +84,17 @@ document.getElementById("theme-select").addEventListener("change", changeTheme)
 
 function changeTheme(event){ 
     document.body.setAttribute("data-theme", event.target.value)
-    localStorage.setItem("theme", event.target.value)
+    localStorage.setItem("movieWatchlist-theme", event.target.value)
 }
+
 function setTheme () {
-    const theme = localStorage.getItem("theme") || "dark"
+    const theme = localStorage.getItem("movieWatchlist-theme") || "dark"
 document.body.setAttribute("data-theme", theme)
 document.getElementById("theme-select").value = theme
 }
 
-setTheme()
+function init() {
+    setTheme()
+}
+
+init()

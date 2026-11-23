@@ -1,9 +1,6 @@
 const myWatchlist = document.getElementById("watchlist-container")
-
-
-
-
 let watchlist = JSON.parse(localStorage.getItem("watchlist")) || []
+
 
 
 function renderWatchlist () {
@@ -71,13 +68,18 @@ document.getElementById("theme-select").addEventListener("change", changeTheme)
 
 function changeTheme(event){ 
     document.body.setAttribute("data-theme", event.target.value)
+    localStorage.setItem("movieWatchlist-theme", event.target.value)
 }
 
-renderWatchlist()
-setTheme()
 
 function setTheme () {
-    const theme = localStorage.getItem("theme") || "dark"
-document.body.setAttribute("data-theme", theme)
-document.getElementById("theme-select").value = theme
+    const theme = localStorage.getItem("movieWatchlist-theme") || "dark"
+    document.body.setAttribute("data-theme", theme)
+    document.getElementById("theme-select").value = theme
 }
+function init() {
+    renderWatchlist()
+    setTheme()
+}
+
+init()
